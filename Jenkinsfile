@@ -12,8 +12,8 @@ pipeline {
         }
        stage('SHOW') {
             steps {
-                echo " credsA ---  ${MY_CREDS_USR}"
-                echo " credsB ---  ${MY_CREDS_PSW}"
+                echo " credsA ---  HELLO WORLD"
+                
 
 
             }
