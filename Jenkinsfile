@@ -26,11 +26,6 @@ pipeline {
 
 
     }
-    post{
-        always{
-
-        }
-    }
 
 
 }
