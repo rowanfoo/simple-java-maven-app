@@ -1,16 +1,12 @@
 pipeline {
     agent any
-    environment{
-
-        MY_CREDS = credentials('rowan-cred')
-
-
+    tools{
+       maven 'maven'
     }
-
     stages {
         stage('Build') {
             steps {
-                echo " creds ---  ${MY_CREDS}"
+              sh "mvn clean"
 
             }
         }
