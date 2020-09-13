@@ -4,22 +4,29 @@ pipeline {
        maven 'maven'
     }
     stages {
-        stage('Build') {
+        stage('init') {
             steps {
-              sh "mvn clean"
-
+				script
+				{
+						gv = load "script.groovy"
+				
+				}
+               echo " Done init"
             }
         }
-       stage('SHOW') {
+        
+		stage('build') {
             steps {
-                echo " credsA ---  HELLO WORLD"
-                
-
-
+				script
+				{
+						gv.buildApp()
+		
+				}
             }
-        }
-
-
+        }	
+        
+        
+        
 
     }
 
